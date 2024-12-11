@@ -11,18 +11,24 @@
     "build": "tsc",
     "lint": "biome check src",
     "lint:fix": "biome check . --write",
-    "format": "biome format . --write"
+    "format": "biome format . --write",
+    "psql": ". ./.env && docker compose up db -d && docker compose exec db /bin/psql -U ${POSTGRES_USER} -d ${POSTGRES_DB}"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "prisma": {
+    "seed": "node --loader ts-node/esm prisma/seed.ts"
+  },
   "dependencies": {
+    "@prisma/client": "5.22.0",
     "fastify": "^5.1.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@types/node": "^22.9.0",
     "prisma": "^5.22.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
   }
 }
