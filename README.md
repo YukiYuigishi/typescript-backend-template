@@ -9,17 +9,17 @@
    ```
 ## DB初期化方法
 
-1. `psql install --frozen-lockfile` を実行して、依存関係をインストールする。
+1. 依存関係をインストールする。
 
    ```bash
-   psql install --frozen-lockfile
+   pnpm install --frozen-lockfile
    ```
 
 2. マイグレーションを実行するため、以下のコマンドを実行する。
 
    ```bash
    docker compose up db -d
-   psql prisma migrate deploy
+   pnpm prisma migrate deploy
    ```
    テーブルを作成後、`prisma/seed.ts`が実行され初期データの流し込みが行われる。
 
