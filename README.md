@@ -55,21 +55,21 @@ model users {
 ```
 スキーマの変更をマイグレーションする。
 ```bash
-psql prisma migrate dev --name suitable_name
+pnpm prisma migrate dev --name suitable_name
 ```
 ## その他コマンド類
 
 | コマンド                                      | 説明                                                                                              |
 |-----------------------------------------------|---------------------------------------------------------------------------------------------------|
-| `psql prisma migrate dev --name suitable_name` | Prismaのマイグレーションを開発環境で実行し、指定した名前で新しいマイグレーションを作成する。         |
-| `psql prisma migrate deploy`                  | Prismaのマイグレーションを本番環境に適用する。                                                    |
-| `psql prisma studio`                          | Prisma Studioを起動し、データベースのデータをインタラクティブに操作する。                       |
-| `pnpm run test`                               | テストを実行するためのコマンドですが、現在はエラーを出力して終了する（未設定）。                   |
-| `pnpm run dev`                                | TypeScriptコードをコンパイルし、`dist/index.js`を実行して開発サーバーを起動する。                   |
-| `pnpm run start`                              | コンパイル済みの`dist/index.js`を実行してアプリケーションを起動する。                             |
-| `pnpm run build`                              | TypeScriptコードをコンパイルして、`dist`ディレクトリに出力する。                                 |
-| `pnpm run lint`                               | `src`ディレクトリ内のコードを`biome`で静的解析し、問題がないかチェックする。                    |
-| `pnpm run lint:fix`                           | `biome`を使用して、コードの静的解析結果に基づいて自動的に修正する。                              |
-| `pnpm run format`                             | `biome`を使用して、コードを自動的にフォーマットする。                                           |
-| `pnpm run psql`                               | `.env`ファイルを読み込み、`docker compose`を使って`db`コンテナを起動し、`psql`を実行してPostgreSQLに接続する。 |
+| `pnpm prisma migrate dev --name suitable_name` | Prismaのマイグレーションを開発環境で実行し、指定した名前で新しいマイグレーションを作成する。         |
+| `pnpm prisma migrate deploy`                  | Prismaのマイグレーションを本番環境に適用する。                                                    |
+| `pnpm prisma studio`                          | Prisma Studioを起動し、データベースのデータをインタラクティブに操作する。                       |
+| `pnpm test`                               | テストを実行するためのコマンドですが、現在はエラーを出力して終了する（未設定）。                   |
+| `pnpm dev`                                | TypeScriptコードをコンパイルし、`dist/index.js`を実行して開発サーバーを起動する。                   |
+| `pnpm start`                              | コンパイル済みの`dist/index.js`を実行してアプリケーションを起動する。                             |
+| `pnpm build`                              | TypeScriptコードをコンパイルして、`dist`ディレクトリに出力する。                                 |
+| `pnpm lint`                               | `src`ディレクトリ内のコードを`biome`で静的解析し、問題がないかチェックする。                    |
+| `pnpm lint:fix`                           | `biome`を使用して、コードの静的解析結果に基づいて自動的に修正する。                              |
+| `pnpm format`                             | `biome`を使用して、コードを自動的にフォーマットする。                                           |
+| `pnpm psql`                               | `.env`ファイルを読み込み、`docker compose`を使って`db`コンテナを起動し、`psql`を実行してPostgreSQLに接続する。 |
 
